@@ -8,7 +8,7 @@ import {
 
 import { Hero } from '../hero';
 import { HeroService } from '../hero.service';
-import { NgFor } from '@angular/common';
+import { AsyncPipe, NgFor } from '@angular/common';
 import { RouterLink } from '@angular/router';
 
 @Component({
@@ -16,7 +16,7 @@ import { RouterLink } from '@angular/router';
   standalone: true,
   templateUrl: './hero-search.component.html',
   styleUrls: [ './hero-search.component.css' ],
-  imports: [NgFor, RouterLink]
+  imports: [NgFor, AsyncPipe, RouterLink]
 })
 export class HeroSearchComponent implements OnInit {
   heroes$!: Observable<Hero[]>;
